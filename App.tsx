@@ -17,7 +17,7 @@ function App(): React.JSX.Element {
   };
 
   return (
-    <SafeAreaView style={[backgroundStyle, styles.container]}>
+    <>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
@@ -26,12 +26,13 @@ function App(): React.JSX.Element {
         style={styles.webview}
         source={{uri: 'http://localhost:3000/'}}
       />
-    </SafeAreaView>
+    </>
   );
 }
 
 const deviceHeight = Dimensions.get('window').height;
 const deviceWidth = Dimensions.get('window').width;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
